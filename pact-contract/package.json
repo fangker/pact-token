@@ -1,0 +1,31 @@
+{
+  "name": "pact",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test-reset-migrate": "export network=test && truffle compile --all && truffle migrate --network=test --reset",
+    "test": "export network=test && npm run build  && truffle test --network test",
+    "dev-migrate": "export network=development  && truffle compile && truffle migrate --network=development",
+    "build": "rm -rf ./build/* & truffle compile",
+    "start-ganache": "cat ./dev | tr '\\n' '\\0' |xargs -0 ganache-cli --i 1337  --blockTime 1 --mnemonic"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nomiclabs/hardhat-ethers": "^2.0.2",
+    "@openzeppelin/contracts": "^3.4.1",
+    "@openzeppelin/contracts-upgradeable": "^3.4.1",
+    "@openzeppelin/hardhat-upgrades": "^1.6.0",
+    "@openzeppelin/truffle-upgrades": "^1.5.0",
+    "@truffle/hdwallet-provider": "1.2.1",
+    "truffle": "^5.1.62",
+    "bignumber.js": "^9.0.1",
+    "ethers": "^5.0.32",
+    "ganache-cli": "6.12.2"
+  },
+  "devDependencies": {}
+}
