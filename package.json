@@ -16,8 +16,9 @@
     "vue-router": "^3.0.1",
     "vuetify": "^2.4.6",
     "vuex": "^3.6.2",
-    "web3": "1.2.8",
-    "lodash":"^4.17.21"
+    "web3": "1.2.9",
+    "lodash":"^4.17.21",
+    "ethereumjs-util": "^7.0.10"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
